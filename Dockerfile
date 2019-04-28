@@ -58,7 +58,5 @@ RUN bash -c "source activate firedrake && python -m ipykernel install --name fir
 # Complete the environment, and leave the container in a state ready for jhub
 RUN bash -c "source activate firedrake && pip install mpltools nbformat"
 WORKDIR /home/jovyan
-#RUN bash -c "source activate firedrake && move-notebooks"
-#RUN bash -c "source activate firedrake && rekernel-notebooks"
 RUN rmdir work
 ENV OMPI_MCA_btl=tcp,self
