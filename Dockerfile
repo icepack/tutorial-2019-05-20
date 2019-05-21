@@ -37,7 +37,7 @@ RUN rm spec-file.txt
 # Install firedrake
 WORKDIR /opt/conda/envs/firedrake/
 RUN curl -O https://raw.githubusercontent.com/firedrakeproject/firedrake/master/scripts/firedrake-install
-RUN bash -c "source activate firedrake && python3 firedrake-install --no-package-manager --disable-ssh --venv-name=firedrake-venv"
+RUN bash -c "source activate firedrake && python3 firedrake-install --no-package-manager --disable-ssh --venv-name=firedrake-venv --install icepack"
 
 # Set up a bash environment for interactive shell use
 RUN mkdir -p /opt/conda/envs/firedrake/etc/conda/activate.d
